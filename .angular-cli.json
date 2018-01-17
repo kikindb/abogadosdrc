@@ -26,6 +26,7 @@
         "assets/fa/css/fa-brands.min.css"
       ],
       "scripts": [
+        "assets/jquery/jquery.slim.min.js",
         "assets/b4/js/bootstrap.bundle.min.js",
         "assets/tether/js/tether.min.js"
       ],

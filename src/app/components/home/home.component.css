@@ -1,0 +1,30 @@
+.big-icon{
+  font-size: 40px;
+  margin-bottom: 0;
+  color: white;
+}
+.iconos-principal{
+  background-color: #0087ff;
+}
+
+.container-fluid{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.col-sm-3 h4{
+    color: white;
+}
+
+.imagen{
+    width: 400px;
+}
+
+.lema{
+    background: url(https://www.latogabirrete.com/wp-content/uploads/2017/08/courthouse-1223280_960_720.jpg) no-repeat scroll center top rgba(0, 135, 255, 0.5);
+    background-attachment: fixed !important;
+    background-size: cover !important;
+    padding: 120px 0;
+    position: relative;
+    color: white;
+}
