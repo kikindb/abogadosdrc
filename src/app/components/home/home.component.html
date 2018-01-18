@@ -1,7 +1,11 @@
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="d-block w-100" src="assets/img/slide01.jpg" alt="First slide">
+      <img class="d-block w-100" src="assets/img/slide01.jpg" alt="Abogados DRC">
+      <div class="carousel-caption">
+          <img src="assets/img/logo-drc-sm.png" alt="Logo DRC">
+          <h2 class="text-shadow">Abogados DR&amp;C</h2>
+        </div>
     </div>
     <div class="carousel-item">
       <img class="d-block w-100" src="assets/img/slide02.jpg" alt="Second slide">
@@ -50,22 +54,31 @@
   <div class="row">
     <div class="col-sm-8">
         <h2>¿Quiénes Sómos?</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, sed ea! Unde alias fuga doloremque eum eveniet praesentium nesciunt quas. Saepe dolores harum ipsum sit itaque fugit amet enim adipisci.</p>
+        <p>Somos una empresa responsable basada en las leyes Fiscales y Administrativas, elevando en igualdad de condiciones a los contribuyentes con la Autoridad, y de esta manera se haga la justa interpretación y aplicación de la norma Jurídica.</p>
+        <a [routerLink]="['nosotros']">Leer M&aacute;s...</a>
     </div>
     <div class="col-sm-4">
-      <img class="imagen" src="assets/img/juez.jpg" alt="Abogados DRC">
+        <iframe width="350" height="250" src="https://www.youtube.com/embed/uD7w2j_fz98" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <!-- <img class="imagen" src="assets/img/juez.jpg" alt="Abogados DRC"> -->
     </div>
   </div>  
 </div>
 
 <div class="container-fluid text-center top-30 lema">
-  <h3>Sómos la solución a tus problemas fiscales y administrativos.</h3>
+  <h3 class="text-shadow">Sómos la solución a tus problemas fiscales y administrativos.</h3>
 </div>
 
 <div class="jumbotron jumbotron-fluid">
   <div class="container">
-    <h1 class="display-4">Fluid jumbotron</h1>
-    <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+    <div class="row">
+      <div class="col-md-5 align-self-start">
+        <img class="img-thumbnail max-img-width-200" src="assets/img/mazo.jpg" alt="Justicia">
+      </div>
+      <div class="col-md-7 align-self-center">
+        <h1>Trabajo Responsable</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate eius maxime accusamus eaque numquam rerum eum minus officia sequi expedita ipsam, perspiciatis illum. Totam repudiandae corrupti aliquam at architecto! Nam!</p>
+      </div>
+    </div>
   </div>
 </div>
 <app-contacto></app-contacto>
