@@ -1,22 +1,43 @@
-<div class="container">
+<div id="contacto" class="container">
   <h3>Cont&aacute;ctanos</h3>
-  <form>
-      <div class="form-group">
+  <div *ngIf="contactoEnviado">
+      <div class="alert alert-success alert-dismissible fade show" role="alert">
+          <strong>Éxito!</strong> Su mensaje ha sido enviado, le responderemos pronto.
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+  </div>
+  <form [formGroup]="forma" (ngSubmit)="enviarDatos()">
+      <div class="form-group" [ngClass]="{'has-danger': !forma.get('name').valid }">
         <label for="InputNombre">Nombre</label>
-        <input type="text" class="form-control" id="InputNombre" placeholder="Ingresa tu nombre">
+        <input type="text" class="form-control" id="InputNombre" placeholder="Ingresa tu nombre" formControlName="name">
+        <div *ngIf="forma.controls['name'].errors?.minlength" class="form-control-feedback">
+            <small class="form-text text-muted">El nombre debe ser de al menos 3 caracteres.</small>
+        </div>
       </div>
       <div class="form-group">
-        <label for="InputEmail">Email</label>
-        <input type="email" class="form-control" id="InputEmail" placeholder="Ingresa tu email">
+        <label for="InputPhone">Teléfono con Lada*</label>
+        <input type="number" class="form-control" id="InputEmail" placeholder="Ingresa tu telefono" formControlName="phone">
+        <div *ngIf="forma.controls['phone'].errors?.minlength" class="form-control-feedback">
+            <small class="form-text text-muted">El teléfono debe ser de 10 dígitos.</small>
+        </div>
       </div>
       <div class="form-group">
-        <label for="InputAsunto">Asunto</label>
-        <input type="text" class="form-control" id="InputAsunto" placeholder="Ingresa el asunto">
+        <label for="InputEmail">Email*</label>
+        <input type="email" class="form-control" id="InputEmail" placeholder="Ingresa tu email" formControlName="email">
+        <div *ngIf="forma.controls['email'].errors?.pattern" class="form-control-feedback">
+            <small class="form-text text-muted">Ingrese un email válido.</small>
+        </div>
       </div>
       <div class="form-group">
-        <label for="TextMensaje">Mensaje</label>
-        <textarea class="form-control" id="TextMensaje"></textarea>
+        <label for="InputAsunto">Asunto*</label>
+        <input type="text" class="form-control" id="InputAsunto" placeholder="Ingresa el asunto" formControlName="subject">
       </div>
-      <button type="submit" class="btn btn-primary">Enviar</button>
+      <div class="form-group">
+        <label for="TextMensaje">Mensaje*</label>
+        <textarea class="form-control" id="TextMensaje" formControlName="message"></textarea>
+      </div>
+      <button [disabled] = "!forma.valid" type="submit" class="btn btn-primary">Enviar</button>
     </form>
 </div>
